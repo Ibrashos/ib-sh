@@ -1,1 +1,1 @@
-pritn("Hello GitHub")
+print("Hello GitHub")
