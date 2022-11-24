@@ -7,10 +7,10 @@ s.listen(2)
 print("Server is up now!")
 
 conn1, add1 = s.accept() #Сохранение объекта сокета нашего клиента и его адрес
-print("First client is connected!")
+print("First client is connected to ", add1)
 
 conn2, add2 = s.accept()
-print("Second client is connected!")
+print("Second client is connected to ", add2)
 
 def acceptor1():
 	while True:
