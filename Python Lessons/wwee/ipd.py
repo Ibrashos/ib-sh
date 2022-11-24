@@ -1,3 +1,4 @@
 import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-s.sendto(b'input()', ('10.10.0.16', 8888))
+a = input()
+s.send(str(a), ('192.168.1.13', 8888))
