@@ -2,13 +2,15 @@ import socket
 from threading import Thread
 # 127.0.0.1
 client_socket = socket.socket() #Создаем новый сокет
-client_socket.connect(("192.168.1.13", 5000)) #Подключаем его к серверному сокету
+client_socket.connect(("10.10.0.45", 5000)) #Подключаем его к серверному сокету
 
 #Создаем ф-и отправки и полученя сообщений
+name = input('Введите свое имя: ')
 def sender():
 	while True:
 		a = input() #Читаем строку с клавиатуры
-		client_socket.send(a.encode("utf-8")) #Отправляем её, предварительно закодировав
+		mes = f"{name}: {a}"
+		client_socket.send(mes.encode("utf-8")) #Отправляем её, предварительно закодировав
 def reciver():
 	while True:
 		message = client_socket.recv(1024) #Получаем строкуот сервера

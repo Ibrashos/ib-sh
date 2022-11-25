@@ -1,4 +1,3 @@
 import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-a = input()
-s.send(str(a), ('192.168.1.13', 8888))
+s.sendto(b"Message", ('10.10.0.45', 8888))

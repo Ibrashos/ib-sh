@@ -2,7 +2,7 @@ import socket
 from threading import Thread
 s = socket.socket()
 # 127.0.0.1
-s.bind(('192.168.1.13', 5000))
+s.bind(('10.10.0.45', 5000))
 s.listen(2)
 print("Server is up now!")
 
