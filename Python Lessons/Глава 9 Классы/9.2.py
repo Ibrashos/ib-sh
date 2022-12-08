@@ -1,21 +1,20 @@
 class Restaraunt():
-	def __init__(self,restaraunt_name,cuisine_type):
-		self.restaraunt_name = restaraunt_name
+	def __init__(self,rastaraunt_name,cuisine_type):
+		self.rastaraunt_name = rastaraunt_name
 		self.cuisine_type = cuisine_type
 
 	def describe_restaraunt(self):
-		print(f"The restaraunt name is {self.restaraunt_name.title()}")
-		print(f"Cuisine type: {self.cuisine_type}")
+		print(f"Название ресторана: {self.rastaraunt_name.title()}")
+		print(f"Тип кухни: {self.cuisine_type}")
 
-	def open_restaraunt(self):
-		print(f"\nThe {self.restaraunt_name.title()} is open!")
+	def restraunt_open(self):
+		print(f"{self.rastaraunt_name.title()} открыт!")
 
-my_rastaraunt = Restaraunt('veranda','italian')
-dad_restaraunt = Restaraunt('vasil','irish')
-son_restaraunt = Restaraunt('monte carlo','american')
+my_restaraunt = Restaraunt('Веспучи','Американская')
+my_restaraunt.describe_restaraunt()
 
-print(f"Descrption of the rastaraunt")
+dad_restaraunt = Restaraunt('santiago','irish')
+dad_restaraunt.describe_restaraunt()
 
-
-my_rastaraunt.describe_restaraunt()
-my_rastaraunt.open_restaraunt()
+son_restaraunt = Restaraunt('bunker','russian')
+son_restaraunt.describe_restaraunt()
