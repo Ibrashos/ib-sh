@@ -11,5 +11,7 @@ class Restaraunt():
 		print(f"\nThe {self.restaraunt_name.title()} is open!")
 
 my_rastaraunt = Restaraunt('veranda','italian')
+print(f"Descrption of the rastaraunt")
+
 my_rastaraunt.describe_restaraunt()
 my_rastaraunt.open_restaraunt()
