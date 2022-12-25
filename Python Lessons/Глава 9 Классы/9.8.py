@@ -10,19 +10,23 @@ class User():
 	def greet_user(self):
 		print(f"Hello, {self.full_name}!")
 
-class Admin(User):
-	def __init__(self,first_name,last_name):
-		super().__init__(first_name,last_name)
-		self.privilages = ['добавлять сообщения','удалять пользователей','банить пользователей']
+class Privilages():
+	def __init__(self):
+		self.privilages = ['add message','delete user','ban user']
 
 	def show_privilages(self):
-		print('Разрешено:')
+		print('Privilages:')
 		for privilage in self.privilages:
 			print(privilage.title())
 
-admin = Admin('garry','manjaro')
+class Admin(User):
+	def __init__(self,first_name,last_name):
+		super().__init__(first_name,last_name)
+		self.privilages = Privilages()
+
+admin = Admin('garry','kaspar')
 admin.greet_user()
-admin.show_privilages()
+admin.privilages.show_privilages()
 
 
 
