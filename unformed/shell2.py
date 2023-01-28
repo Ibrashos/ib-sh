@@ -9,7 +9,7 @@ while True:
 	client.send(command.encode())
 	if command.lower() == 'exit':
 		break
-	result_output = client.recv(1024).decode('utf-8')
+	result_output = client.recv(1024).decode('cp866')
 	print(result_output)
 client.close()
 s.close()
