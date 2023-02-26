@@ -1,3 +1,6 @@
 with open('pi_digits.txt') as file_object:
-	contents = file_object.read()
-	print(contents)  
+	lines = file_object.read()
+for line in lines:
+	print(line.rstrip())
+print(lines)
+# print(contents.rstrip())
